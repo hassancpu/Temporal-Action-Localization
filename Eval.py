@@ -7,7 +7,7 @@ Created on Thu Apr 16 08:24:02 2020
 """
 import numpy as np
 from utils import ConfigBase
-from data_loader_changed import Dataloader
+from data_loader import Dataloader
 
 
 
