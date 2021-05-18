@@ -6,3 +6,5 @@ In this paper, we propose a new network based on Gated Recurrent Unit (GRU) and 
 **Data Preparation**
 
 We have used the prepared I3D features of the Thumos14 dataset from the [RecapNet](https://github.com/tianwangbuaa/RecapNet). Please download the features and put them in the *data* folder.
+
+In progress...
