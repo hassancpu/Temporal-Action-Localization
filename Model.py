@@ -126,7 +126,7 @@ class Config(ConfigBase):
     def __init__(self):
         super(Config, self).__init__()
 
-        self.split_gt_info_path = './data/THUMOS14/split_gt_info'
+        self.split_gt_info_path = './data/split_gt_info'
         self.batch_size = 32
         self.window_size = 100
         self.recap_length = 17
