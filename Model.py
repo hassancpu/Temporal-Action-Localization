@@ -130,8 +130,8 @@ class Config(ConfigBase):
         self.batch_size = 32
         self.window_size = 100
         self.recap_length = 17
-        self.feat_path_rgb = './data/THUMOS14/thumos14_i3d_features_rgb_with_ucf101.hdf5'
-        self.feat_path_flow = './data/THUMOS14/thumos14_i3d_features_flow_with_ucf101.hdf5'
+        self.feat_path_rgb = './data/thumos14_i3d_features_rgb_with_ucf101.hdf5'
+        self.feat_path_flow = './data/thumos14_i3d_features_flow_with_ucf101.hdf5'
         self.feat_resolution = 16
 
         self.feat_mode = 'both'
@@ -147,13 +147,11 @@ class Config(ConfigBase):
 class CustomSaver(Callback):
   def on_epoch_end(self, epoch, accuracy, logs= {}):
     # save the trained model after each epoch
-    model.save("/home/user1/Master Thesis"
-                "/model {}, v_loss={:6.4f}, v_start={:6.4f}"
-                ", v_end={:6.4f}, v_act={:6.4f}"
-                ", loss={:6.4f}, start={:6.4f}, end={:6.4f}, act={:6.4f}"                    
-                .format(epoch+1, accuracy['val_loss'], accuracy['val_start'], accuracy['val_end']
-                       , accuracy['val_action'], accuracy['loss'], accuracy['start'], accuracy['end']
-                       , accuracy['action']))
+    model.save("./Trained_Model/model {}, v_loss={:6.4f}, v_start={:6.4f}"
+               ", v_end={:6.4f}, v_act={:6.4f}, loss={:6.4f}, start={:6.4f}"
+               ", end={:6.4f}, act={:6.4f}".format(epoch+1, accuracy['val_loss']
+                , accuracy['val_start'], accuracy['val_end'], accuracy['val_action']
+                , accuracy['loss'], accuracy['start'], accuracy['end'], accuracy['action']))
 
 Saver = CustomSaver()   
 
