@@ -95,12 +95,12 @@ class Config(ConfigBase):
     def __init__(self):
         super(Config, self).__init__()
 
-        self.split_gt_info_path = './data/THUMOS14/split_gt_info'
+        self.split_gt_info_path = './data/split_gt_info'
         self.batch_size = 1
         self.window_size = 100
         self.recap_length = 17
-        self.feat_path_rgb = './data/THUMOS14/thumos14_i3d_features_rgb_with_ucf101.hdf5'
-        self.feat_path_flow = './data/THUMOS14/thumos14_i3d_features_flow_with_ucf101.hdf5'
+        self.feat_path_rgb = './data/thumos14_i3d_features_rgb_with_ucf101.hdf5'
+        self.feat_path_flow = './data/thumos14_i3d_features_flow_with_ucf101.hdf5'
         self.feat_resolution = 16
 
         self.feat_mode = 'both'
