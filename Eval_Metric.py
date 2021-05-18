@@ -225,11 +225,11 @@ def average_recall_vs_nr_proposals(proposals, ground_truth, tiou_thresholds=np.l
 
 results = all_results
 
-ground_truth_filename = './data/THUMOS14/split_gt_info/test_gt.json'
+ground_truth_filename = './data/split_gt_info/test_gt.json'
 ground_truth = json.load(open(ground_truth_filename, 'r'))
 
 recalls_avg, proposals_per_video = average_recall_vs_nr_proposals(results, ground_truth)
 f = interp1d(proposals_per_video, recalls_avg)
 print(f(50), f(100), f(200), f(300), f(400), f(500))
 
-#recalls_tiou, tiou_thresholds = recall_vs_tiou_thresholds(results, ground_truth, nr_proposals=100)
+recalls_tiou, tiou_thresholds = recall_vs_tiou_thresholds(results, ground_truth, nr_proposals=100)
