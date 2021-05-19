@@ -7,4 +7,9 @@ In this paper, we propose a new network based on Gated Recurrent Unit (GRU) and 
 
 We have used the prepared I3D features of the Thumos14 dataset from the [RecapNet](https://github.com/tianwangbuaa/RecapNet). Please download the features and put them in the *data* folder.
 
+**Training & Evaluating The Probability Prediction Model**
+To train the network run the Model.py and your trained model will be save in data folder. After training you can generate proposals by using the Eval_Gen.py and finally to get the AR@AN and R@100-tIoU, run the Eval_Metric.py.
+
+
+
 In progress...
