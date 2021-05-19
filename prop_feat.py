@@ -17,12 +17,12 @@ gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
 
 #load the best trained model
-model.load_weights('/Trained_Model/model_best 191, v_loss=0.1265, v_start=0.0226, v_end=0.0213, v_act=0.1245, v_difference=0.0013, loss=0.1214, start=0.0401, end=0.0370, act=0.1323, difference=0.0031')
-
+model.load_weights('./Trained_Model/model_Best 202, v_loss=0.1220, v_start=0.0223, v_end=0.0210,'
+                   'v_act=0.1108, loss=0.1233, start=0.0414, end=0.0370, act=0.1405')
 
 #import ground_truth oracle information
 split = 'train'
-gt_path = './data/THUMOS14/split_gt_info'
+gt_path = './data/split_gt_info'
 split_gt_dict = json.load(open(os.path.join(gt_path, split + '_gt.json'), 'r'))
 
 
@@ -127,12 +127,12 @@ class Config(ConfigBase):
     def __init__(self):
         super(Config, self).__init__()
 
-        self.split_gt_info_path = './data/THUMOS14/split_gt_info'
+        self.split_gt_info_path = './data/split_gt_info'
         self.batch_size = 1
         self.window_size = 1000000
         self.recap_length = 17
-        self.feat_path_rgb = './data/THUMOS14/thumos14_i3d_features_rgb_with_ucf101.hdf5'
-        self.feat_path_flow = './data/THUMOS14/thumos14_i3d_features_flow_with_ucf101.hdf5'
+        self.feat_path_rgb = './data/thumos14_i3d_features_rgb_with_ucf101.hdf5'
+        self.feat_path_flow = './data/thumos14_i3d_features_flow_with_ucf101.hdf5'
         self.feat_resolution = 16
 
         self.feat_mode = 'both'
@@ -220,10 +220,8 @@ if __name__=='__main__':
         all_prob[cur_video_name] = score_matrix_ref
         all_vote[cur_video_name] = vote_matrix_ref
         
+        
 np.save('./data/THUMOS14/prob/' + split + '.npy', all_prob, allow_pickle= True)
-
-#np.save('/home/user1/Master Thesis/Python/My Self/data/THUMOS14/prob/val_vote.npy'
-#        , all_vote, allow_pickle= True)
-
+#np.save('./data/THUMOS14/prob/val_vote.npy', all_vote, allow_pickle= True)
 np.save('./data/THUMOS14/proposals/' + split + '.npy', all_results, allow_pickle= True)        
         
