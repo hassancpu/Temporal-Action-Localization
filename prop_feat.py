@@ -221,7 +221,7 @@ if __name__=='__main__':
         all_vote[cur_video_name] = vote_matrix_ref
         
         
-np.save('./data/THUMOS14/prob/' + split + '.npy', all_prob, allow_pickle= True)
-#np.save('./data/THUMOS14/prob/val_vote.npy', all_vote, allow_pickle= True)
-np.save('./data/THUMOS14/proposals/' + split + '.npy', all_results, allow_pickle= True)        
+np.save('./data/prob/' + split + '.npy', all_prob, allow_pickle= True)
+#np.save('./data/prob/val_vote.npy', all_vote, allow_pickle= True)
+np.save('./data/proposals/' + split + '.npy', all_results, allow_pickle= True)        
         
