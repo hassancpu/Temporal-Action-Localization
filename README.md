@@ -9,10 +9,18 @@ We have used the prepared I3D features of the Thumos14 dataset from the [RecapNe
 
 **Training & Evaluating The Probability Prediction Model**
 
-To train the network run the Model and your trained model will be save in the Trained_Model folder. After training you can generate proposals using the Eval_Gen and finally to get the AR@AN and R@100-tIoU, run the Eval_Metric. If you want to generate the proposals whose temporal boundaries are computed by Interpolation, run the Eval_Gen_Interpolation.  
+To train the network run the *Model* and your trained model will be saved in the *Trained_Model* folder. After training, you can generate proposals using the *Eval_Gen* and finally to get the AR@AN and R@100-tIoU, run the *Eval_Metric*. If you want to generate the proposals whose temporal boundaries are computed by Interpolation, run the *Eval_Gen_Interpolation*.  
 
 **Ranking The Proposals By Ranking Modules**
 
-For better ranking the generated proposals, train one of the ranking modules (Model_prop, Model_prop_LTR) and then evaluate it using the Eval_Gen_Prop. To train the both models you need to extract features from proposals and to do that, I use a similar approach to the [BSN](https://github.com/wzmsltw/BSN-boundary-sensitive-network) but with some modifications in the prop_feat and prop_feat_all. And to evaluate the generated proposals with this approach, run the Eval_Gen_Prop.
+For better ranking the generated proposals, train one of the ranking modules (*Model_prop*, *Model_prop_LTR*) and then evaluate it using the *Eval_Gen_Prop*. To train both models you need to extract features from the generated proposals and to do that, we use a similar approach to the [BSN](https://github.com/wzmsltw/BSN-boundary-sensitive-network) but with some modifications in the *prop_feat* and *prop_feat_all*. Finally, to evaluate the generated proposals with this approach, run the *Eval_Gen_Prop*.
+
+**Qualitative Results**
+
+In the below figures, you can see some of our generated proposals. For more information and results please refer to the paper.
+
+![action_prop1](https://user-images.githubusercontent.com/62461020/119692934-15190b00-be61-11eb-91b6-5db092a9e1d0.jpg)
+![action_prop2](https://user-images.githubusercontent.com/62461020/119692950-177b6500-be61-11eb-9b09-e74bea92f42e.jpg)
+
 
 In progress...
