@@ -19,8 +19,8 @@ For better ranking the generated proposals, train one of the ranking modules (*M
 
 In the below figures, you can see some of our generated proposals. For more information and results please refer to the paper.
 
-![action_prop1](https://user-images.githubusercontent.com/62461020/119692934-15190b00-be61-11eb-91b6-5db092a9e1d0.jpg)
-![action_prop2](https://user-images.githubusercontent.com/62461020/119692950-177b6500-be61-11eb-9b09-e74bea92f42e.jpg)
+<img src="https://user-images.githubusercontent.com/62461020/119692934-15190b00-be61-11eb-91b6-5db092a9e1d0.jpg" width="400" height="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/62461020/119692950-177b6500-be61-11eb-9b09-e74bea92f42e.jpg" width="400" height="300">
+
 
 
 In progress...
