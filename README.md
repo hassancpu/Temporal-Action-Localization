@@ -9,7 +9,7 @@ We have used the prepared I3D features of the Thumos14 dataset from the [RecapNe
 
 **Training & Evaluating The Probability Prediction Model**
 
-To train the network run the *Model* and your trained model will be saved in the *Trained_Model* folder. After training, you can generate proposals using the *Eval_Gen* and finally to get the AR@AN and R@100-tIoU, run the *Eval_Metric*. If you want to generate the proposals whose temporal boundaries are computed by Interpolation, run the *Eval_Gen_Interpolation*.  
+To train the network run the *Model* and your trained model will be saved in the *Trained_Model* folder. After training, you can generate proposals using the *Eval_Gen* and finally to get the AR@AN and R@100-tIoU, run the *Eval_Metric*. If you want to generate the proposals with precise temporal boundaries computed by Interpolation, run the *Eval_Gen_Interpolation*.  
 
 **Ranking The Proposals By Ranking Modules**
 
